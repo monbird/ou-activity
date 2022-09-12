@@ -1,0 +1,49 @@
+.dnd-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .dnd-col {
+        padding: 20px;
+        margin: 6px;
+        border: 1px solid lightgrey;
+        flex-grow: 1;
+        min-width: 250px;
+        width: 30%;
+        .dnd-col-title {
+            text-align: center;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+        .dnd-tiles-container {
+            min-height: 400px;
+            padding: 6px;
+            .dnd-cat-tile {
+                padding: 7px;
+                margin: 6px;
+                border: 1px solid lightgrey;
+                border-radius: 2px;
+                cursor: grab;
+                min-width: 200px;
+                background-color: white;
+                &.is-being-dragged {
+                    background-color: lightgrey;
+                }
+                &.dnd-tile-green {
+                    background-color: rgb(116, 151, 87);
+                }
+                &.dnd-tile-red {
+                    background-color: rgb(174, 79, 77);
+                }
+            }
+            &.is-dragging-over {
+                background-color: lightslategrey;
+            }
+            transition: background-color 0.2s ease;
+        }
+    }
+}
+
+button {
+    font-weight: bold;
+    margin-left: 6px;
+}
