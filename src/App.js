@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
-import { TabScatter, TabDnD, TabPie } from './Tabs';
+import { TabScatter, TabDnD, TabPie, TabBar } from './Tabs';
 
 const panes = [
     {
@@ -31,7 +31,16 @@ const panes = [
 ];
 
 function App() {
-    return <Tab panes={panes} />;
+    return (
+        <div>
+            <div className="desktop">
+                <Tab panes={panes} />
+            </div>
+            <div className="mobile">
+                <TabBar />
+            </div>
+        </div>
+    );
 }
 
 export default App;

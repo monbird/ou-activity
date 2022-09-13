@@ -1,0 +1,12 @@
+.recharts-tooltip-label .explanation {
+    display: block;
+    word-wrap: break-word;
+    max-width: 400px;
+    white-space: normal;
+}
+
+@media only screen and (max-width: 767px) {
+    .recharts-tooltip-label .explanation {
+        max-width: 200px;
+    }
+}

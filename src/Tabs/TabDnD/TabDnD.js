@@ -89,7 +89,9 @@ function TabDnD() {
     return (
         <div>
             <h3>
-            Consider the categories below and drag & drop them into appropriate containers as how you think the two groups may have responded.
+                Consider the categories below and drag & drop them into
+                appropriate containers as how you think the two groups may have
+                responded.
             </h3>
             <DragDropContext onDragEnd={onDragEnd}>
                 <div className="dnd-container">
@@ -130,7 +132,7 @@ function TabDnD() {
             <Button
                 secondary
                 onClick={checkResults}
-                disabled={columns.categories.tiles.length}
+                disabled={Boolean(columns.categories.tiles.length)}
             >
                 Check your results
             </Button>

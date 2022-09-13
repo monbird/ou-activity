@@ -9,45 +9,8 @@ import {
     LabelList,
     Legend,
 } from 'recharts';
-
+import CustomTooltip from '../chartUtils/CustomTooltip';
 import { data } from '../data/sample';
-
-const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-        return (
-            <div
-                className="recharts-default-tooltip"
-                style={{
-                    margin: '0px',
-                    padding: '10px',
-                    backgroundColor: 'rgb(255, 255, 255)',
-                    border: '1px solid rgb(204, 204, 204)',
-                    whiteSpace: 'nowrap',
-                }}
-            >
-                <p className="recharts-tooltip-label">
-                    <b>{payload[0].payload.cat.toUpperCase()}</b>
-                </p>
-                <p className="recharts-tooltip-label">
-                    <b>{payload[0].name}: </b>
-                    {payload[0].value}
-                    {payload[0].unit}
-                </p>
-                <p className="recharts-tooltip-label">
-                    <b>{payload[1].name}: </b>
-                    {payload[1].value}
-                    {payload[1].unit}
-                </p>
-                <p className="recharts-tooltip-label">
-                    <b>Explanation: </b>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Phasellus eu.
-                </p>
-            </div>
-        );
-    }
-
-    return null;
-};
 
 function TabScatter() {
     return (
