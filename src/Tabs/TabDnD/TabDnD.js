@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Button } from 'semantic-ui-react';
 import { DragDropContext, Droppable } from '@hello-pangea/dnd';
 import Tile from './Tile';
 import { data } from '../../data/sample';
-import './Tab2.scss';
+import './TabDnD.scss';
 
-function Tab2() {
+function TabDnD() {
     const [columns, setColumns] = useState({
         categories: {
             title: 'Categories',
@@ -87,6 +88,9 @@ function Tab2() {
 
     return (
         <div>
+            <h3>
+            Consider the categories below and drag & drop them into appropriate containers as how you think the two groups may have responded.
+            </h3>
             <DragDropContext onDragEnd={onDragEnd}>
                 <div className="dnd-container">
                     {columnOrder.map((colId, i) => {
@@ -123,14 +127,15 @@ function Tab2() {
                     })}
                 </div>
             </DragDropContext>
-            <button
+            <Button
+                secondary
                 onClick={checkResults}
                 disabled={columns.categories.tiles.length}
             >
-                Check results
-            </button>
+                Check your results
+            </Button>
         </div>
     );
 }
 
-export default Tab2;
+export default TabDnD;

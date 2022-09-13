@@ -1,14 +1,14 @@
-// import './App.css';
+import './App.scss';
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
-import { Tab1, Tab2, Tab3 } from './Tabs';
+import { TabScatter, TabDnD, TabPie } from './Tabs';
 
 const panes = [
     {
         menuItem: 'Idea 1',
         render: () => (
             <Tab.Pane>
-                <Tab1 />
+                <TabDnD />
             </Tab.Pane>
         ),
     },
@@ -16,7 +16,7 @@ const panes = [
         menuItem: 'Idea 2',
         render: () => (
             <Tab.Pane>
-                <Tab2 />
+                <TabPie />
             </Tab.Pane>
         ),
     },
@@ -24,7 +24,7 @@ const panes = [
         menuItem: 'Idea 3',
         render: () => (
             <Tab.Pane>
-                <Tab3 />
+                <TabScatter />
             </Tab.Pane>
         ),
     },

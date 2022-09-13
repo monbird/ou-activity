@@ -25,6 +25,7 @@
                 cursor: grab;
                 min-width: 200px;
                 background-color: white;
+
                 &.is-being-dragged {
                     background-color: lightgrey;
                 }
@@ -33,6 +34,11 @@
                 }
                 &.dnd-tile-red {
                     background-color: rgb(174, 79, 77);
+                }
+                .dnd-cat-tile-description {
+                    display: block;
+                    font-size: smaller;
+                    text-align: right;
                 }
             }
             &.is-dragging-over {

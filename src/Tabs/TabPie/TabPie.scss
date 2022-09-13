@@ -1,0 +1,32 @@
+$colors: 54478C, 2C699A, 048BA8, 0DB39E, 16DB93, 83e377, B9E769, EFEA5A, F1C453,
+    F29E4C;
+
+@each $color in $colors {
+    .color-#{$color} .ui.label.label {
+        background-color: #{'#' + $color};
+    }
+}
+
+.pie-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+}
+
+.ui.labeled.input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ui.label.label {
+    width: 200px;
+}
+
+.ui.secondary.button {
+    width: 100%;
+    margin-top: 10px;
+}

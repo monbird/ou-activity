@@ -18,9 +18,13 @@ const Tile = ({ data, index }) => (
                 {...provided.dragHandleProps}
             >
                 {data.cat}
+                <div className="dnd-cat-tile-description">
+                    {data.correct === undefined
+                        ? ''
+                        : ` (Younger: ${data.x}%, Older: ${data.y}%)`}
+                </div>
             </div>
         )}
     </Draggable>
 );
-
 export default Tile;

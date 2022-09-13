@@ -1,5 +1,5 @@
-import Tab1 from './Tab1';
-import Tab2 from './Tab2/Tab2';
-import Tab3 from './Tab3';
+import TabScatter from './TabScatter';
+import TabDnD from './TabDnD/TabDnD';
+import TabPie from './TabPie/TabPie';
 
-export { Tab1, Tab2, Tab3 };
+export { TabScatter, TabDnD, TabPie };
