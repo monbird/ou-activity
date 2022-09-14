@@ -16,8 +16,8 @@ function TabScatter() {
     return (
         <div>
             <h3>
-                Analyze the graph below and learn explanations of the
-                differences between the two groups.
+                Analyze the Scatter Chart below and learn explanations for
+                different responses of the two groups.
             </h3>
             <div style={{ width: '100%', height: 400 }}>
                 <ResponsiveContainer>
